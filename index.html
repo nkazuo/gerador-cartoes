@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Cartão Pro - Araucária</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Bibliotecas Externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2>Personalizar</h2>
+            
+            <div class="form-group">
+                <label>Nome:</label>
+                <input type="text" id="nome" placeholder="Ex: Nilton Suzuki">
+                
+                <label>Cargo:</label>
+                <input type="text" id="cargo" placeholder="Ex: Agente de Inovação">
+                
+                <label>Telefone:</label>
+                <input type="text" id="telefone" placeholder="Ex: 49984222532">
+                
+                <label>E-mail:</label>
+                <input type="email" id="email" placeholder="email@exemplo.com">
+
+                <label>LinkedIn (Link ou Usuário):</label>
+                <input type="text" id="linkedin" placeholder="linkedin.com/in/usuario">
+            </div>
+
+            <div class="actions">
+                <button id="btnAtualizar" class="btn-primary">Atualizar Preview</button>
+                <button id="btnExportar" class="btn-success">Exportar PNG (Alta Resolução)</button>
+                <button id="btnLimpar" class="btn-danger">Limpar Formulário</button>
+            </div>
+        </aside>
+
+        <main class="preview-section">
+            <h2>Preview do Cartão</h2>
+            <div id="cartao-preview" class="cartao">
+                <p style="color: #718096; text-align: center; width: 100%;">Preencha os dados e clique em "Atualizar Preview"</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
