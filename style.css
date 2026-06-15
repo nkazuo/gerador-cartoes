@@ -1,4 +1,4 @@
- * { 
+  * { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
@@ -24,7 +24,7 @@ body {
 }
 
 .form-group label { display: block; margin-top: 12px; font-weight: bold; font-size: 13px; color: #4a5568; }
-.form-group input, .form-group select {
+.form-group input {
     width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #cbd5e0; border-radius: 6px;
 }
 
@@ -32,9 +32,10 @@ body {
 button { padding: 12px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.2s; }
 .btn-primary { background: #3182ce; color: white; }
 .btn-success { background: #38a169; color: white; }
+.btn-danger { background: #e53e3e; color: white; }
 button:hover { opacity: 0.9; }
 
-/* Preview da Tela Inteira */
+/* Seção de Preview */
 .preview-section { 
     flex: 1; 
     display: flex; 
@@ -43,107 +44,94 @@ button:hover { opacity: 0.9; }
     justify-content: center; 
     background: #e2e8f0; 
 }
-.preview-section h2 { margin-bottom: 20px; }
+.preview-section h2 { margin-bottom: 20px; color: #2d3748; }
 
-/* O Cartão em si */
+/* O CARTÃO */
 .cartao {
-    width: 480px; 
-    height: 250px; 
+    width: 492px; 
+    height: 256px; 
     background: #1a202c;
-    border-radius: 10px;
+    border-radius: 12px;
     color: white;
     position: relative;
     display: flex; 
     justify-content: space-between; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     overflow: hidden;
 }
 
-/* Coluna da Esquerda (Logo e Textos) */
+/* Coluna da Esquerda */
 .detalhes-coluna {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    padding: 25px 0 25px 25px; 
-    max-width: 300px; /* Segura a largura para não empurrar o QR Code */
+    justify-content: center; 
+    padding: 22px 28px; 
+    max-width: 350px;
 }
 
-/* Container do Logo */
+/* Logo */
 .logo-container { 
-    height: 110px; /* Reduzido levemente para dar respiro ao texto */
-    margin-bottom: 5px;
+    height: 95px; 
+    margin-bottom: 8px;
     display: flex; 
-    align-items: flex-start;
+    align-items: center; 
+    justify-content: flex-start;
 }
 .logo-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
-.sem-logo {
-    border: 1px dashed #444; padding: 5px; font-size: 10px; color: #888;
-    height: 100%; display: flex; align-items: center; justify-content: center;
-}
 
-/* Caixa de informações textuais */
-.info-box { 
-    display: flex; 
-    flex-direction: column; 
-    width: 100%;
-}
+/* Textos */
+.info-box { display: flex; flex-direction: column; gap: 0px; }
 
-/* Textos com trava de segurança contra quebra de linha infinita */
 .info-nome { 
-    font-size: 18px; 
+    font-size: 17px; /* Reduzido para caber melhor nomes longos */
     font-weight: bold; 
     text-transform: uppercase; 
-    margin-bottom: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona "..." se passar do tamanho */
-}
-.info-cargo { 
-    color: #63b3ed; 
-    font-style: italic; 
-    font-size: 13px; 
-    margin-bottom: 8px; /* Subiu os contatos um pouco mais */
+    letter-spacing: 0.2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* Contatos aprimorados e alinhados */
+.info-cargo { 
+    color: #63b3ed; 
+    font-style: italic; 
+    font-size: 14px; 
+    margin-bottom: 8px; 
+}
+
 .info-contato { 
     font-size: 13px; 
     color: #cbd5e0; 
     display: flex; 
     align-items: center; 
-    gap: 8px; 
-    margin-top: 5px; 
+    gap: 10px; 
+    margin-top: 2px;
 }
 
-/* Trava no Span do contato (telefone/e-mail) */
 .info-contato span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
-    max-width: 250px; /* Impede que o e-mail vaze da tela */
-    display: block;
+    max-width: 290px;
 }
 
-/* Coluna da Direita (QR Code na Direita Inferior) */
+/* Coluna da Direita (QR CODE SUBIDO) */
 .qrcode-coluna {
     display: flex;
-    align-items: flex-end; 
+    align-items: center; /* Mudado de flex-end para center para o QR Code subir */
     justify-content: flex-end; 
-    padding: 25px 25px 25px 0; 
+    padding: 0 22px 0 0; 
 }
 
-/* Quadrado branco para leitura */
 #qrcode-container {
     background: white;
-    padding: 8px;
-    border-radius: 6px;
+    padding: 7px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 136px; 
-    height: 136px;
+    width: 125px; 
+    height: 125px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
